@@ -1,4 +1,4 @@
-require('dotenv').config(); // Run node backend/db/supabaseClient.js from the root directory
+require('dotenv').config(); // Runs node backend/db/supabaseClient.js from the root directory
 const { createClient } = require('@supabase/supabase-js');
 
 const supabaseUrl = process.env.SUPABASE_URL;

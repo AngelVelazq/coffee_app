@@ -186,6 +186,8 @@ section{
 
 .header .cart-items-container .cart-item img {
     height: 7rem;
+    width: 8rem;
+    object-fit: cover;
 }
 
 .header .cart-items-container .cart-item .content h3{
@@ -208,7 +210,7 @@ section{
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background:url(/images/home-img.png) no-repeat;
+    background:url('/images/home-img.png') no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -413,21 +415,55 @@ section{
     background:none;
 }
 
+.footer{
+    background: var(--black);
+    text-align: center;   
+}
 
+.footer .share a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: #fff;
+    border:var(--border);
+    margin:.3rem;
+    border-radius: 50%;
+}
 
+.footer .share a:hover{
+    background-color: var(--main-color);
+}
 
+.footer .links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:2rem 0;
+    gap:1rem;
+}
 
+.footer .links a{
+    padding:.7rem 2rem;
+    color:#fff;
+    border:var(--border);
+    font-size: 2rem;
+}
 
+.footer .links a:hover{
+    background: var(--main-color);
+}
 
+.footer .credit{
+    font-size: 1.5rem;
+    color:#fff;
+    font-weight: lighter;
+    padding:1.5rem;
+}
 
-
-
-
-
-
-
-
-
+.footer .credit span {
+    color: var(--main-color);
+}
 
 
 
