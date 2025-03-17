@@ -1,101 +1,80 @@
-# coffee_app
+# Coffee Shop App
 
-Coffee Shop App
+## A simple web application for ordering coffee online. This project consists of a frontend built with HTML, CSS, and JavaScript, and a backend powered by Express.js and Supabase.
 
-A simple web application for ordering coffee online. This project consists of a frontend built with HTML, CSS, and JavaScript, and a backend powered by Express.js and Supabase.
 
-Table of Contents
 
-Features
+### Table of Contents
 
-Installation
+* Features
+* Installation
+* Backend Setup
+* API Endpoints 
+* Environment Variables
+* Technologies used
+* License 
 
-Backend Setup
+## Features
+* View coffee menu and available items.
+* Add items to a cart for easy ordering.
+* Place an order through the app.
+* Fetch products from a Supabase database.
 
-API Endpoints
+![This is an alt text.](/images/logo.png)
 
-Environment Variables
+# Installation
+## Prerequisites
+* Node.js (v16 or later recommended)
+* npm (comes with Node.js)
+* Git (to clone the repository)
 
-Technologies Used
-
-License
-
-Features
-
-View coffee menu and available items.
-
-Add items to a cart.
-
-Place an order.
-
-Fetch products from a Supabase database.
-
-Installation
-
-Prerequisites
-
-Make sure you have the following installed:
-
-Node.js (v16 or later recommended)
-
-npm (comes with Node.js)
-
-Clone the Repository
-
-git clone https://github.com/yourusername/coffee_app.git
+## Clone Repository
+```
+git clone https://github.com/AngelVelazq/coffee_app
 cd coffee_app
+```
 
-Backend Setup
+# Backend Setup
+## Install Dependencies
+```
+~/coffee_app$ npm install
+```
+## Start the Server
+```
+npm run start
+```
+### The backend will run on http://localhost:5000 by default.
 
-Install Dependencies
 
-npm install
+## API Endpoints
 
-Start the Server
+| Method  | Endpoint | Description | Example Response |
+| ------- | -------- | ----------- | ---------------- |
+| GET     | /api/products | Fetch all products | [{ id: 1, name: 'Latte', price: 5.0 }, {...}]
+| POST | /api/orders | Place a new order | { orderId: 123, status: 'pending' } |
 
-npm start
 
-The backend will run on http://localhost:5000 by default.
 
-API Endpoints
-
-Method
-
-Endpoint
-
-Description
-
-GET
-
-/api/products
-
-Fetch all products
-
-POST
-
-/api/orders
-
-Place a new order
-
-Environment Variables
-
-Create a .env file in the root directory and add the following:
-
+# Environment Variables
+## .env (/coffee_app/.env)
+```
 SUPABASE_URL=your_supabase_url
 SUPABASE_KEY=your_supabase_key
-PORT=5000
+```
+## Call Method (backend/db/supabaseClient.js)
+#### In your backend, you load the environment variables like this:
+```
+require('dotenv').config();  
+```
+#### (This will load the variables from the .env file into your application.)
 
-Technologies Used
 
-Frontend: HTML, CSS, JavaScript
+# Technologies Used
+* Frontend: **HTML, CSS, JavaScript**
 
-Backend: Node.js, Express.js
+* Backend: **Node.js, Express.js**
 
-Database: Supabase (PostgreSQL)
+* Database: Supabase **(PostgreSQL)**
 
-Other: dotenv, cors
-
-License
-
-This project is licensed under the MIT License.
-
+* Environment Management: **dotenv**
+* Cross-Origin Resource Sharing (CORS): **cors**
